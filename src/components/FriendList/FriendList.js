@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import s from './FriendList.module.css';
 
 function FriendList({ friends }) {
@@ -6,7 +7,7 @@ function FriendList({ friends }) {
       {friends.map(friend => {
         const isOnline = friend.isOnline;
         return (
-          <li className={s.item}>
+          <li className={s.item} key={friend.name}>
             <span
               className={s.isOnline}
               style={isOnline ? { backgroundColor: 'green' } : { backgroundColor: 'red' }}
@@ -19,5 +20,9 @@ function FriendList({ friends }) {
     </ul>
   );
 }
+
+FriendList.propTypes = {
+  friends: PropTypes.arrayOf(PropTypes.shape),
+};
 
 export default FriendList;
