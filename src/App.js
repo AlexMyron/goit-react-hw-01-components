@@ -11,17 +11,16 @@ import transactions from './components/TransactionHistory/transactions.json';
 function App() {
   return (
     <div className="App">
-      {
-        <Profile
-          name={name}
-          tag={tag}
-          location={location}
-          avatar={avatar}
-          followers={stats.followers}
-          views={stats.views}
-          likes={stats.likes}
-        />
-      }
+      <Profile
+        name={name}
+        tag={tag}
+        location={location}
+        avatar={avatar}
+        followers={stats.followers}
+        views={stats.views}
+        likes={stats.likes}
+      />
+
       <Statistics title="Upload stats" stats={statisticalData} />
       <Statistics stats={statisticalData} />
 

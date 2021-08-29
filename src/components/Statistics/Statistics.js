@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import StatisticsEl from '../StatisticsEl';
+import Transaction from './Transaction';
 import s from './Statistics.module.css';
 
 function Statistics({ title = null, stats }) {
@@ -11,7 +11,7 @@ function Statistics({ title = null, stats }) {
 
       <ul className={s.statList}>
         {stats.map(stat => {
-          return <StatisticsEl stat={stat} key={stat.id} />;
+          return <Transaction stat={stat} key={stat.id} />;
         })}
       </ul>
     </section>
