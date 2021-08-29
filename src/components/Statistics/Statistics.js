@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import Transaction from './Transaction';
+import Transaction from './StatisticsElement';
 import s from './Statistics.module.css';
 
 function Statistics({ title = null, stats }) {

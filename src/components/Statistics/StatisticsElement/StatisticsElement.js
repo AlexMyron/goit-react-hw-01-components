@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import s from './Transaction.module.css';
+import s from './StatisticsElement.module.css';
 import getRandomColor from './getRandomColor';
 
-function Transaction({ stat }) {
+function StatisticsElement({ stat }) {
   const color = getRandomColor();
   return (
     <li className={s.item} key={stat.id} style={{ backgroundColor: `${color}` }}>
@@ -12,8 +12,8 @@ function Transaction({ stat }) {
   );
 }
 
-Transaction.propTypes = {
+StatisticsElement.propTypes = {
   stat: PropTypes.object,
 };
 
-export default Transaction;
+export default StatisticsElement;
